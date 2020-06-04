@@ -39,7 +39,7 @@ void segmentoMaximoDV(int *A, int p, int r,int &pri,int &ul, int &sumita)
     int max2izq=A[q];
     int suma=max2izq;
     int Imedio=q-1;
-    for(int i=Imedio;i>-1;i--)
+    for(int i=Imedio;i>(p-1);i--)
     {
         suma=suma+A[i];
         max2izq=max(max2izq,suma);
@@ -83,6 +83,22 @@ void segmentoMaximoDV(int *A, int p, int r,int &pri,int &ul, int &sumita)
 
 }
 
+void segmentoMaximoDV(int* A, int n,int ruta)
+{
+    int pri=-1;
+    int ul=-2;
+    int sumito=0;
+    segmentoMaximoDV(A,0,n-1,pri,ul,sumito);
+    if (sumito!=0)
+    {
+        cout<<"La mejor parte de la ruta "<<ruta<<" es entre las calles "<<pri+1<<" y "<<ul+2<<endl;
+    }
+    else
+    {
+        cout<<"La ruta "<<ruta<<" no tiene calles interesantes"<<endl;
+    }
+}
+
 
 void segmentoMaximoLIN(int *A,int n,int &sumaMax, int& e, int& d)
 {
@@ -102,7 +118,7 @@ void segmentoMaximoLIN(int *A,int n,int &sumaMax, int& e, int& d)
             suma=0;
             i=f+1;
         }
-        else if(suma>sumaMax)
+        else if(suma>=sumaMax)
         {
             sumaMax=suma;
             e=i;
@@ -111,20 +127,58 @@ void segmentoMaximoLIN(int *A,int n,int &sumaMax, int& e, int& d)
     }
 }
 
-
+void segmentoMaximoLIN(int *A,int n,int ruta)
+{
+    int pri=-1;
+    int ul=-2;
+    int sumito=0;
+    segmentoMaximoLIN(A,n,sumito,pri,ul);
+    if (sumito!=0)
+    {
+        cout<<"La mejor parte de la ruta "<<ruta<<" es entre las calles "<<pri+1<<" y "<<ul+2<<endl;
+    }
+    else
+    {
+        cout<<"La ruta "<<ruta<<" no tiene calles interesantes"<<endl;
+    }
+}
 
 int main()
 {
-    int arr[]={31,-41,59,26,-53,58,97,-93,-23,84};
+    int rutas=0;
+    int calles=0;
+    int *caminos=nullptr;
+    int ncaminos=0;
+
+    cin>>rutas;
+    for(int i=1;i<rutas+1;i++)
+    {
+        cin>>calles;
+        ncaminos=calles-1;
+        caminos=new int[ncaminos]{};
+        for(int j=0;j<ncaminos;j++)
+        {
+            cin>>caminos[j];
+        }
+        segmentoMaximoLIN(caminos,ncaminos,i);
+        //segmentoMaximoDV(caminos,ncaminos,i);
+        delete [] caminos;
+
+
+    }
+
+
+    int arr[]={-10,-50,-70,-50,-1};
+    //{31,-41,59,26,-53,58,97,-93,-23,84};
     int sumMax=0;
     int e=0;
     int d=-1;
-    segmentoMaximoLIN(arr,10,sumMax,e,d);
+    segmentoMaximoLIN(arr,5,sumMax,e,d);
     cout << "El algoritmo termino! y la suma max es: "<<sumMax<<" entre: "<<e<<" y "<<d<< endl;
     int ini=-10;
     int fin=-11;
     int sumita=0;
-    segmentoMaximoDV(arr,0,9,ini,fin,sumita);
+    segmentoMaximoDV(arr,0,4,ini,fin,sumita);
     cout<<"Termino: " <<sumita<<" con inicio: "<<ini<<" y fin: "<<fin<<endl;
     return 0;
 }
