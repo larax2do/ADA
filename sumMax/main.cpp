@@ -2,12 +2,17 @@
 
 using namespace std;
 
+
+//Nombre: Thales Panibra
+//https://github.com/larax2do/ADA/tree/master/sumMax
+
 int trimax(int a,int b,int c)
 {
     return max(a,max(b,c));
 }
 
-
+//algoritmo de suma maxima aplicando divide y conquista
+//modificado para que retorne los valores extremos
 void segmentoMaximoDV(int *A, int p, int r,int &pri,int &ul, int &sumita)
 {
     if(p==r)
@@ -83,6 +88,7 @@ void segmentoMaximoDV(int *A, int p, int r,int &pri,int &ul, int &sumita)
 
 }
 
+//sobrecarga de la funcion para que llamar sea mas facil
 void segmentoMaximoDV(int* A, int n,int ruta)
 {
     int pri=-1;
@@ -99,7 +105,7 @@ void segmentoMaximoDV(int* A, int n,int ruta)
     }
 }
 
-
+//Algoritmo de segemento de suma maxima con costo lineal
 void segmentoMaximoLIN(int *A,int n,int &sumaMax, int& e, int& d)
 {
     sumaMax=0;
@@ -160,8 +166,10 @@ int main()
         {
             cin>>caminos[j];
         }
+
+        //Aqui podemos elejir que algoritmo usar
         segmentoMaximoLIN(caminos,ncaminos,i);
-        //segmentoMaximoDV(caminos,ncaminos,i);
+        segmentoMaximoDV(caminos,ncaminos,i);
         delete [] caminos;
 
 

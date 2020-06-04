@@ -1,0 +1,64 @@
+Vendedor salió a vender
+
+
+Eres el vendedor de un suplemento alimenticio y deseas repartirlo en un cierto distrito. Infelizmente en ese distrito hay varias pendientes y en algunos casos, subir esas pendientes te cuesta bastante pero en algunos casos hay calles que ya tienes registrado que te harán pedido y tienes incluso la cantidad de los pedidos que recibirás.
+
+Ninguna calle está en más de una ruta.
+
+Por ejemplo:
+Tenemos 3 rutas:
+1era ruta: -1, 6
+2da ruta: 4, -5, 4, -3, 4, 4, -4, 4, -5
+3era ruta: -3, -4, -5.
+
+La primera ruta tiene 3 calles y se lee: 
+"Para ir de la calle 1 a la calle 2 cuesta 1"
+"Para ir de la calle 2 a la calle 3 hay un beneficio de 6"
+
+La segunda ruta tiene 10 calles y se lee: 
+"Para ir de la calle 1 a la calle 2 hay un beneficio de 4"
+"Para ir de la calle 2 a la calle 3 hay cuesta 5"
+"Para ir de la calle 3 a la calle 4 hay un beneficio de 4"
+y así sucesivamente.
+
+Se entiende que la calle 1 de la ruta 1 es distinta de la calle 1 de la ruta 2 y lo mismo para las demás calles.
+
+Quieres escoger aquella ruta con la mayor cantidad de pedidos relativamente cerca que te convendría visitar.
+
+FORMATO DE ENTRADA:
+1era línea tiene un elemento 0<R<10^5 indicando la cantidad de rutas.
+A seguir vienen R rutas
+Para la R[i] ruta, la primera línea tendrá el número de calles 0<C[i]<20000
+A seguir, vendrá C[i] - 1 líneas indicando el costo o beneficio de ir de la calle C[i] a la calle C[i+1].
+
+
+FORMATO DE SALIDA
+“La mejor parte de la ruta [R] es entre las calles C[i] y C[j]” ; En caso haya solución
+“La ruta 3 no tiene calles interesantes”   ; En caso no haya solución.
+
+
+
+EJEMPLO:
+3
+3
+-1
+6
+10
+4
+-5
+4
+-3
+4
+4
+-4
+4
+-5
+4
+-3
+-4
+-5
+
+SALIDA
+La mejor parte de la ruta 1 es entre las calles 2 y 3
+La mejor parte de la ruta 2 es entre las calles 3 y 9
+La ruta 3 no tiene calles interesantes
