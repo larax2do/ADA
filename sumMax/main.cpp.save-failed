@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+int trimax(int a,int b,int c)
+{
+    return max(a,max(b,c));
+}
+
+
+int segmentoMaximoDV(int *A, int &p, int &r)
+{
+    if(p==r)
+    {
+        return max(0,A[p]);
+    }
+    int q=(p+r)/2;
+    int qmas=q+1;
+
+    int maxizq=segmentoMaximoDV(A,p,q);
+    int maxder=segmentoMaximoDV(A,qmas,r);
+    int max2izq=A[q];
+    int suma=max2izq;
+    for(int i=q-1;i>-1;i--)
+    {
+        suma=suma+A[i];
+        max2izq=max(max2izq,suma);
+    }
+    int max2der=A[q+1];
+    suma=max2der;
+    for(int j=q+2;j<r+1;j++)
+    {
+        suma=suma+A[j];
+        max2der=max(max2der,suma);
+    }
+    int maxcruz=max2der+max2izq;
+    return trimax(maxder,maxizq,maxcruz);
+
+}
+
+
+void segmentoMaximoLIN(int *A,int n,int &sumaMax, int& e, int& d)
+{
+    sumaMax=0;
+    e=0;
+    d=-1;
+
+    int suma=0;
+    int i=0;
+    int f=-1;
+    while(f<n-1)
+    {
+        f=f+1;
+        suma=suma+A[f];
+        if(suma<0)
+        {
+            suma=0;
+            i=f+1;
+        }
+        else if(suma>sumaMax)
+        {
+            sumaMax=suma;
+            e=i;
+            d=f;
+        }
+    }
+}
+
+
+
+int main()
+{
+    int arr[]={31,-41,59,26,-53,58,97,-93,-23,84};
+    int sumMax=0;
+    int e=0;
+    int d=-1;
+    segmentoMaximoLIN(arr,10,sumMax,e,d);
+    cout << "El algoritmo termino! y la suma max es: "<<sumMax<<" entre: "<<e<<" y "<<d<< endl;
+    return 0;
+}
