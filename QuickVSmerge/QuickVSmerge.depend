@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1592246356 source:d:\thales\ada\quickvsmerge\main.cpp
+	<iostream>
+	<ctime>
+	<stdlib.h>
+	<fstream>
+
