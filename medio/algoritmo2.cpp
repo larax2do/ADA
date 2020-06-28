@@ -54,7 +54,7 @@ RandomAccessIterator quicksort(RandomAccessIterator first, RandomAccessIterator 
 
 int main()
 {
-	/*
+	
 	std::array<int,8001> numbers;
 	auto nmedio=numbers.begin()+((numbers.size()-1)/2);
 	for(int j=0;j<8000;j++)
@@ -66,7 +66,7 @@ int main()
 		cout<<*(quicksort(numbers.begin(),numbers.end(),nmedio))<<std::endl;
 	}
 	
-	*/
+	
 
 
 	/*
@@ -79,9 +79,9 @@ int main()
 
 	*/
 
-	int hola[6]={1,2,3,4,5,6};
+	//int hola[6]={1,2,3,4,5,6};
 
-	auto var=hola.begin();
+	//auto var=hola.begin();
 
 	//cout<<*numbers.end();
 
