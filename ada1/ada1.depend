@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1588283936 source:d:\thales\ada1\main.cpp
-	<iostream>
-	<ctime>
-	<stdlib.h>
-	<time.h>
-
