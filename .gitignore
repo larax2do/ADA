@@ -1,179 +1,180 @@
-# Creado por https://www.toptal.com/developers/gitignore/api/c++,python,codeblocks
-# Editar en https://www.toptal.com/developers/gitignore?templates=c++,python,codeblocks
 
-### C ++ ###
-# Prerrequisitos
-*.re
+# Created by https://www.toptal.com/developers/gitignore/api/c++,python,codeblocks
+# Edit at https://www.toptal.com/developers/gitignore?templates=c++,python,codeblocks
 
-# Archivos de objetos compilados
-* .slo
-* .lo
-* .o
-* .obj
+### C++ ###
+# Prerequisites
+*.d
 
-# Encabezados precompilados
-* .gch
-* .pch
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
 
-# Bibliotecas dinámicas compiladas
-*.entonces
-* .dylib
-* .dll
+# Precompiled Headers
+*.gch
+*.pch
 
-# Archivos del módulo Fortran
-*.modificación
-* .smod
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
 
-# Bibliotecas estáticas compiladas
-* .lai
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
 *.la
-*.una
-* .lib
+*.a
+*.lib
 
-# Ejecutables
+# Executables
 *.exe
-*.fuera
-* .app
+*.out
+*.app
 
 ### CodeBlocks ###
-# específico para CodeBlocks IDE
-*.diseño
-*.depender
-# directorios generados
-compartimiento/
-obj /
+# specific to CodeBlocks IDE
+*.layout
+*.depend
+# generated directories
+bin/
+obj/
 
 ### Python ###
-# Byte-compilado / optimizado / archivos DLL
-__pycache __ /
-* .py [bacalao]
-* $ py.class
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-# C extensiones
+# C extensions
 
-# Distribución / embalaje
-.Pitón
-construir/
-desarrollar huevos /
-dist /
-descargas /
-huevos/
-.huevos/
-lib /
-lib64 /
-partes/
-sdist /
-var /
-ruedas /
-pip-wheel-metadata /
-compartir / ruedas de pitón /
-* .egg-info /
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
 .installed.cfg
-*.huevo
-MANIFIESTO
+*.egg
+MANIFEST
 
 # PyInstaller
-# Por lo general, estos archivos están escritos por un script de Python a partir de una plantilla
-# antes de que PyInstaller compile el exe, para inyectarle la fecha / otras informaciones.
-*.manifiesto
-*.Especificaciones
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
 
-# Registros del instalador
+# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Prueba de unidad / informes de cobertura
-htmlcov /
-.tox /
-.nox /
-.cobertura
-.cobertura.*
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
 .cache
 nosetests.xml
-cobertura.xml
-*.cubrir
-* .py, cubierta
-.hipótesis/
-.pytest_cache /
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
 
-# Traducciones
-*.mes
-*.maceta
+# Translations
+*.mo
+*.pot
 
-# Cosas de Django:
-*.Iniciar sesión
+# Django stuff:
+*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Matraces:
-ejemplo/
+# Flask stuff:
+instance/
 .webassets-cache
 
-# Cosas quebradizas:
+# Scrapy stuff:
 .scrapy
 
-# Documentación de la esfinge
-docs / _build /
+# Sphinx documentation
+docs/_build/
 
 # PyBuilder
-objetivo/
+target/
 
-# Cuaderno Jupyter
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # IPython
-profile_default /
+profile_default/
 ipython_config.py
 
 # pyenv
-versión .python
+.python-version
 
 # pipenv
-# Según pypa / pipenv # 598, se recomienda incluir Pipfile.lock en el control de versiones.
-# Sin embargo, en caso de colaboración, si tiene dependencias o dependencias específicas de la plataforma
-# al no tener soporte multiplataforma, pipenv puede instalar dependencias que no funcionan o no
-# instalar todas las dependencias necesarias.
-# Pipfile.lock
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
 
-# PEP 582; utilizado por ej. github.com/David-OConnor/pyflow
-__pypackages __ /
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
 
-# Cosas de apio
-horario de apio
+# Celery stuff
+celerybeat-schedule
 celerybeat.pid
 
-# SageMath analizó archivos
-* .sage.py
+# SageMath parsed files
+*.sage.py
 
-# Ambientes
+# Environments
 .env
 .venv
-env /
-venv /
-ENV /
-env.bak /
-venv.bak /
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
-# Configuración del proyecto Spyder
+# Spyder project settings
 .spyderproject
 .spyproject
 
-# Configuración del proyecto de cuerda
+# Rope project settings
 .ropeproject
 
-# documentación mkdocs
-/sitio
+# mkdocs documentation
+/site
 
 # mypy
-.mypy_cache /
+.mypy_cache/
 .dmypy.json
 dmypy.json
 
-# Comprobador de tipo pira
-.pira/
+# Pyre type checker
+.pyre/
 
-# pytype analizador de tipo estático
-.pytype /
+# pytype static type analyzer
+.pytype/
 
-# Fin de https://www.toptal.com/developers/gitignore/api/c++,python,codeblocks
+# End of https://www.toptal.com/developers/gitignore/api/c++,python,codeblocks
