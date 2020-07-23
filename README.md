@@ -58,13 +58,14 @@ En un documento explique brevemente por qué tendría cosas positivas y negativa
 
 Utilizar el siguiente generador de números aleatorios:
 
+```
 #include <iostream>
 #include <cstdlib>
 #include <cmath>
 using namespace std;
 
 #define MX 2000000000
-```
+
 int main() {
         int n=8000;
         for(int i=0; i<n; i++) {
@@ -201,3 +202,26 @@ EJEMPLO DE SALIDA
 La mejor cantidad de swaps de trenes es 1 swaps.
 La mejor cantidad de swaps de trenes es 6 swaps.
 La mejor cantidad de swaps de trenes es 1 swaps.
+
+
+## SumaMaxima 2d
+
+Dada la siguiente matriz de tamaño nxn (0< n <128)
+
+4
+-2   0    8   -1
+1   -4    1   -4
+2   -6    2    9
+0   -2   -7    0
+
+(Los valores dentro de la matriz están entre 0<=|n|<1000 )
+
+Encontrar la submatriz cuya suma es máxima. 
+En este caso, es:
+8 - 1
+1 - 4
+2  9
+Sumando 15
+
+1. DIvide y conquista
+2. Programación Dinámica (SEGÚN LAS INDICACIONES EN CLASE).
